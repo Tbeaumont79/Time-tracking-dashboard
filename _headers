@@ -1,2 +1,2 @@
 /*
-  Access-Control-Allow-Origin: https://time-tracking-dashboardfrontchallenge.netlify.app
+  Access-Control-Allow-Origin: *
