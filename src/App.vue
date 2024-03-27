@@ -18,7 +18,7 @@ const activityHeaderCard = ref([
 ]);
 
 const fetchData = async () => {
-  const response = await fetch("https://github.com/Tbeaumont79/Time-tracking-dashboard/blob/main/src/Database/data.json", {
+  const response = await fetch("https://github.com/Tbeaumont79/Time-tracking-dashboard/blob/33fb62ea384f9f13505e13c25c8ac2836ec6bbc5/src/Database/data.json", {
     method: 'GET',
   mode: 'no-cors'
   })
