@@ -18,9 +18,24 @@ const activityHeaderCard = ref([
 ]);
 
 const fetchData = async () => {
-  const res = await fetch("./src/Database/data.json");
-  const json = await res.json();
-  data.value = json;
+  const response = await fetch("./src/Database/data.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erreur réseau");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(
+        "Il y a eu un problème avec l'opération fetch: ",
+        error.message
+      );
+    });
+
+  data.value = response;
 };
 onMounted(() => {
   fetchData();
