@@ -17,7 +17,7 @@ const activityHeaderCard = ref([
   { id: 6, img: '../src/assets/images/icon-self-care.svg', color: '#F2c85C' }
 ])
 const fetchData = async () => {
-  const res = await fetch('data.json')
+  const res = await fetch('../data.json')
   const json = await res.json()
 
   data.value = json
