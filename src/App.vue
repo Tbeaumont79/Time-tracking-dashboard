@@ -9,18 +9,18 @@ const options = ref([
   { id: 3, value: "Monthly" },
 ]);
 const activityHeaderCard = ref([
-  { id: 1, img: "../src/assets/images/icon-work.svg", color: "#FF8A63" },
-  { id: 2, img: "../src/assets/images/icon-play.svg", color: "#57C2E6" },
-  { id: 3, img: "../src/assets/images/icon-study.svg", color: "#FF5e7C" },
-  { id: 4, img: "../src/assets/images/icon-exercise.svg", color: "#4acf81" },
-  { id: 5, img: "../src/assets/images/icon-social.svg", color: "#7034D1" },
-  { id: 6, img: "../src/assets/images/icon-self-care.svg", color: "#F2c85C" },
+  { id: 1, img: "/images/icon-work.svg", color: "#FF8A63" },
+  { id: 2, img: "/images/icon-play.svg", color: "#57C2E6" },
+  { id: 3, img: "/images/icon-study.svg", color: "#FF5e7C" },
+  { id: 4, img: "/images/icon-exercise.svg", color: "#4acf81" },
+  { id: 5, img: "/images/icon-social.svg", color: "#7034D1" },
+  { id: 6, img: "/images/icon-self-care.svg", color: "#F2c85C" },
 ]);
 
 const fetchData = async () => {
   const response = await fetch("data.json", {
-    method: 'GET',
-  mode: 'no-cors'
+    method: "GET",
+    mode: "no-cors",
   })
     .then((response) => {
       if (!response.ok) {
@@ -49,7 +49,7 @@ onMounted(() => {
     <div class="sub-container">
       <div class="personal-card">
         <div class="identity">
-          <img src="./assets/images/image-jeremy.png" alt="" />
+          <img src="/images/image-jeremy.png" alt="" />
           <div class="identity-info">
             <p>Report for</p>
             <h1>Jeremy Robson</h1>

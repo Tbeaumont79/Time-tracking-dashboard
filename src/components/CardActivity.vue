@@ -1,28 +1,36 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps } from "vue";
 defineProps({
   activity: {
     type: Object,
-    required: true
+    required: true,
   },
   timeFilter: {
     type: String,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 <template>
   <div class="card">
     <div class="card-info">
       <div class="title">
         <p>{{ activity.title }}</p>
-        <img src="../assets/images/icon-ellipsis.svg" alt="three dots" />
+        <img src="/images/icon-ellipsis.svg" alt="three dots" />
       </div>
       <div class="content-card">
-        <h2 v-if="timeFilter === 'Daily'">{{ activity.timeframes.daily.current }}hrs</h2>
-        <h2 v-if="timeFilter === 'Weekly'">{{ activity.timeframes.weekly.current }}hrs</h2>
-        <h2 v-if="timeFilter === 'Monthly'">{{ activity.timeframes.monthly.current }}hrs</h2>
-        <p v-if="timeFilter === 'Daily'">Last Day - {{ activity.timeframes.daily.previous }}hrs</p>
+        <h2 v-if="timeFilter === 'Daily'">
+          {{ activity.timeframes.daily.current }}hrs
+        </h2>
+        <h2 v-if="timeFilter === 'Weekly'">
+          {{ activity.timeframes.weekly.current }}hrs
+        </h2>
+        <h2 v-if="timeFilter === 'Monthly'">
+          {{ activity.timeframes.monthly.current }}hrs
+        </h2>
+        <p v-if="timeFilter === 'Daily'">
+          Last Day - {{ activity.timeframes.daily.previous }}hrs
+        </p>
         <p v-if="timeFilter === 'Weekly'">
           Last Week - {{ activity.timeframes.weekly.previous }}hrs
         </p>
