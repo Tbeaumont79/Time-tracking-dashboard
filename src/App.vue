@@ -192,7 +192,7 @@ onMounted(() => {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    width: 80%;
+    width: 75%;
     height: 60%;
     gap: 1rem;
   }
@@ -221,6 +221,7 @@ onMounted(() => {
     justify-content: center;
     background: var(--vt-c-accent);
     height: 65%;
+    width: 15rem;
     border-radius: 15px;
   }
   .identity-info h1 {
@@ -239,8 +240,8 @@ onMounted(() => {
     border: 2px solid #fff;
   }
   .all-card {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 70%;
   }
 
   .header-card {
