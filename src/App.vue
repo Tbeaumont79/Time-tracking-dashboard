@@ -18,7 +18,7 @@ const activityHeaderCard = ref([
 ]);
 
 const fetchData = async () => {
-  const response = await fetch("src/Database/data.json", {
+  const response = await fetch("Database/data.json", {
     method: 'GET',
   mode: 'no-cors'
   })
