@@ -18,7 +18,7 @@ const activityHeaderCard = ref([
 ]);
 
 const fetchData = async () => {
-  const response = await fetch("./src/Database/data.json")
+  const response = await fetch("https://github.com/Tbeaumont79/Time-tracking-dashboard/blob/main/src/Database/data.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Erreur réseau");
