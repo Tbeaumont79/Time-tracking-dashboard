@@ -1,31 +1,30 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import CardActivity from './components/CardActivity.vue'
-const data = ref()
-let selected = ref('Daily')
+import { onMounted, ref } from "vue";
+import CardActivity from "./components/CardActivity.vue";
+const data = ref();
+let selected = ref("Daily");
 const options = ref([
-  { id: 1, value: 'Daily' },
-  { id: 2, value: 'Weekly' },
-  { id: 3, value: 'Monthly' }
-])
+  { id: 1, value: "Daily" },
+  { id: 2, value: "Weekly" },
+  { id: 3, value: "Monthly" },
+]);
 const activityHeaderCard = ref([
-  { id: 1, img: '../src/assets/images/icon-work.svg', color: '#FF8A63' },
-  { id: 2, img: '../src/assets/images/icon-play.svg', color: '#57C2E6' },
-  { id: 3, img: '../src/assets/images/icon-study.svg', color: '#FF5e7C' },
-  { id: 4, img: '../src/assets/images/icon-exercise.svg', color: '#4acf81' },
-  { id: 5, img: '../src/assets/images/icon-social.svg', color: '#7034D1' },
-  { id: 6, img: '../src/assets/images/icon-self-care.svg', color: '#F2c85C' }
-])
+  { id: 1, img: "../src/assets/images/icon-work.svg", color: "#FF8A63" },
+  { id: 2, img: "../src/assets/images/icon-play.svg", color: "#57C2E6" },
+  { id: 3, img: "../src/assets/images/icon-study.svg", color: "#FF5e7C" },
+  { id: 4, img: "../src/assets/images/icon-exercise.svg", color: "#4acf81" },
+  { id: 5, img: "../src/assets/images/icon-social.svg", color: "#7034D1" },
+  { id: 6, img: "../src/assets/images/icon-self-care.svg", color: "#F2c85C" },
+]);
+
 const fetchData = async () => {
-  const res = await fetch('../data.json')
-  const json = await res.json()
-
-  data.value = json
-}
-
+  const res = await fetch("./src/Database/data.json");
+  const json = await res.json();
+  data.value = json;
+};
 onMounted(() => {
-  fetchData()
-})
+  fetchData();
+});
 </script>
 <template>
   <div class="container">
