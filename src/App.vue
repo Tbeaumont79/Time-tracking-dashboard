@@ -238,6 +238,10 @@ onMounted(() => {
     border-radius: 50%;
     border: 2px solid #fff;
   }
+  .all-card {
+    width: 80%;
+    height: 50%;
+  }
 
   .header-card {
     position: absolute;
